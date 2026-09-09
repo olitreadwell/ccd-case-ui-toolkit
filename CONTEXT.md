@@ -22,6 +22,7 @@
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - 2026-08-05 test-coverage — utils.ts role helper coverage (PR #1, fork, open) — lesson: utils.ts helpers already claimed.
+- 2026-09-09 a11y — cut-tabs not conformant with WAI-ARIA tabs pattern (role "list" instead of "tablist", no tab ids, no aria-labelledby on panels to tab id, all tabs tabindex=0, no arrow-key nav). pr-opened fork PR #20 (base fork master, draft=false). Verified: problem present in current master; lint + AOT build pass; karma suite not runnable in container (no browser+system libs). Lesson: tabs a11y now claimed.
 
 ## Mined gaps (discovered, not yet attempted)
-- populate via repo-audit pass (2026-09-09).
+- 2026-09-09 tabs.a11y cut-tabs missing tablist role / panel-tab linking / roving tabindex / arrow-key nav — status: attempted (fork PR #20)
