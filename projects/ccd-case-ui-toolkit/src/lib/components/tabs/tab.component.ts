@@ -19,4 +19,8 @@ export class TabComponent {
   @Input()
   public selected: boolean;
 
+  public getTabId(id: string): string {
+    return 'tab-' + id;
+  }
+
 }
