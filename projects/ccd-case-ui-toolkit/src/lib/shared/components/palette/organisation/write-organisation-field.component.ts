@@ -96,7 +96,7 @@ export class WriteOrganisationFieldComponent extends AbstractFieldWriteComponent
   }
 
   // The way the search works divide into two phases
-  // 1. go through collection of org items one by one by doing the comparsion of search string using includes to all the address fields
+  // 1. go through collection of org items one by one by doing the comparison of search string using includes to all the address fields
   // 2. split the search string into arrays and apply the each array item into the address fields
   // 3. both step 1, 2 will go until max count result reaches, and finally combine both result sets into final collection
   public searchOrg(organisations: OrganisationVm[], lowerOrgSearchText: string): SimpleOrganisationModel[] {
