@@ -1,5 +1,5 @@
 # hmcts/ccd-case-ui-toolkit context
-> refreshed 2026-09-09 | upstream default: master @ cefeb6ed1
+> refreshed 2026-09-30 | upstream default: master @ 136dd21e6
 
 ## Identity & policies
 - upstream: hmcts/ccd-case-ui-toolkit, default branch master, primary language TypeScript (Angular library), English-first yes.
@@ -19,10 +19,13 @@
 
 ## Issue-area health
 - No maintainer-engaged open issues: repo has only the Renovate dependency-dashboard issue #1567 open; the rest (52 "open issues") are PRs. No open GFI/help-wanted labels. -> self-found gap via repo-audit.
+- 2026-09-30 CI note: `yarn test:audit` is currently red repo-wide. The committed `yarn-audit-known-issues` baseline predates advisories published 2026-09-30 (Angular core/compiler/common, baseline-browser-mapping, brace-expansion, moment), so the `build` job fails at its first step on ANY branch, including unmodified master. Upstream is refreshing the baseline in its own PR EXUI-4988 (suppressions). Fork master's build job was still green on 2026-09-28. Do not bundle a baseline refresh into a trivial PR.
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - 2026-08-05 test-coverage — utils.ts role helper coverage (PR #1, fork, open) — lesson: utils.ts helpers already claimed.
 - 2026-09-09 a11y — cut-tabs not conformant with WAI-ARIA tabs pattern (role "list" instead of "tablist", no tab ids, no aria-labelledby on panels to tab id, all tabs tabindex=0, no arrow-key nav). pr-opened fork PR #20 (base fork master, draft=false). Verified: problem present in current master; lint + AOT build pass; karma suite not runnable in container (no browser+system libs). Lesson: tabs a11y now claimed.
+- 2026-09-30 trivial-fix pack — typos + dead README badges (self-found, no issue). 16 fixes across 10 files (README badge/typo cleanup, 5 comment typos, 4 test-title typos). pr-opened fork PR #32 (base fork master, draft=false, commit aa673e926). Verified: every fix present in current master; `yarn lint`, `yarn build`, `tsc -p tsconfig.spec.json` pass locally on Node 24.18.0; karma not runnable (no browser). CI caveat: `build` job red at `yarn test:audit` — pre-existing advisory-baseline drift, unrelated to the diff. Lesson: README typos + both dead badges (`hits.dwyl.io`, `issuestats.com`) now claimed; remaining markdown links all resolve (checked 2026-09-30).
 
 ## Mined gaps (discovered, not yet attempted)
 - 2026-09-09 tabs.a11y cut-tabs missing tablist role / panel-tab linking / roving tabindex / arrow-key nav — status: attempted (fork PR #20)
+- 2026-09-30 doc typos in `RELEASE-NOTES.md` ("accomodate" line 822, "seperate" line 2287) — status: dropped(historical changelog; editing old release-note entries reads as noise, not a fix). Re-pick only if a doc-hygiene PR is explicitly wanted.
