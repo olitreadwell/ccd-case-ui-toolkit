@@ -374,7 +374,7 @@ export class CaseFullAccessViewComponent implements OnInit, OnDestroy, OnChanges
         }
       }
     }
-    // once the page has beeen stabilised, ensure the selected tab is scrolled into view
+    // once the page has been stabilised, ensure the selected tab is scrolled into view
     this.zone.onStable.pipe(take(1)).subscribe(() => {
       const header: any = (this.tabGroup as any)._tabHeader;
       if (this.selectedTabIndex < 5){

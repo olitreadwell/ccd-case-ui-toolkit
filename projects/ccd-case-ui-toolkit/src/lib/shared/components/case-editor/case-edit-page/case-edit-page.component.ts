@@ -464,7 +464,7 @@ export class CaseEditPageComponent implements OnInit, AfterViewChecked, OnDestro
     }
   }
 
-  // we do the check, becasue the data comes from the external source
+  // we do the check, because the data comes from the external source
   public pageWithFieldExists(caseFieldId: string) {
     return this.wizard.findWizardPage(caseFieldId);
   }

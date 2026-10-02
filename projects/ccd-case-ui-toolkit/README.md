@@ -2,8 +2,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![codecov](https://codecov.io/gh/hmcts/ccd-case-ui-toolkit/branch/master/graph/badge.svg)](https://codecov.io/gh/hmcts/ccd-case-ui-toolkit)
 [![Known Vulnerabilities](https://snyk.io/test/github/hmcts/ccd-case-ui-toolkit/badge.svg)](https://snyk.io/test/github/hmcts/ccd-case-ui-toolkit)
-[![HitCount](http://hits.dwyl.io/hmcts/ccd-case-ui-toolkit.svg)](#ccd-case-ui-toolkit)
-[![Issue Stats](http://issuestats.com/github/hmcts/ccd-case-ui-toolkit/badge/pr)](http://issuestats.com/github/hmcts/ccd-case-ui-toolkit)
 
 # Quick Start (for local development and testing)
 
@@ -24,14 +22,14 @@ In your project folder that should consume the library:
 # Go to consumer repository folder
 cd case-management-web
 
-# Link you library to the project
+# Link your library to the project
 yarn link "@hmcts/ccd-case-ui-toolkit"
 
 yarn start
 
 ```
 
-*Note: The linking might be broken so if your encounter problems please follow this process:*
+*Note: The linking might be broken so if you encounter problems please follow this process:*
 
 ```bash
 # Install all dependencies
@@ -41,7 +39,7 @@ yarn install
 yarn build:watch
 ```
 
-In you project folder that should consume the library:
+In your project folder that should consume the library:
 
 ```bash
 # Go to consumer repository folder
@@ -50,7 +48,7 @@ cd case-management-web
 # Remove existing toolkit dist
 rm -rf node_modules/\@hmcts/ccd-case-ui-toolkit/dist
 
-# Link you library to the project
+# Link your library to the project
 cp <location of ccd-case-ui-toolkit>/dist node_modules/\@hmcts/ccd-case-ui-toolkit
 
 yarn start
@@ -156,7 +154,7 @@ For CCD developers it should be noted the library should be built with just the 
 
 #### Test the library
 - `yarn test` for running all your `*.spec.ts` tests once. Generated code coverage report may be found in `coverage` folder.
-- `yarn test:watch` for running all you `*.spec.ts` and watch for file changes.
+- `yarn test:watch` for running all your `*.spec.ts` and watch for file changes.
 
 # Library development workflow
 
