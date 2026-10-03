@@ -43,7 +43,7 @@ export class ReadFieldsFilterPipe implements PipeTransform {
   }
 
   private static isValidCollection(field: CaseField, values?: object, checkConditionalShowAgainst?: object): boolean {
-    // if field is collection and it has complex/collection child field; parent field doesnt have value defined
+    // if field is collection and it has complex/collection child field; parent field doesn't have value defined
     if (!Array.isArray(field.value) && values && values.hasOwnProperty(field.id)) {
       return true;
     }

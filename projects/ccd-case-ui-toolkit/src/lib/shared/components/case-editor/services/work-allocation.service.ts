@@ -160,7 +160,7 @@ export class WorkAllocationService {
 
   /**
    * Handles the response from the observable to get the user details when task is completed.
-   * @param response is the response given from the observable which contains the user detaild.
+   * @param response is the response given from the observable which contains the user details.
    */
   public handleTaskCompletionError(): void {
     if (isInternalUser(this.sessionStorageService)) {

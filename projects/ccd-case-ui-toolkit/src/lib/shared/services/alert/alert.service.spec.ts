@@ -233,7 +233,7 @@ describe('AlertService', () => {
   });
 
   describe('success', () => {
-    it('should be a hot alert successs observable', done => {
+    it('should be a hot alert success observable', done => {
       rpxTranslationServiceSpy.getTranslation$.and.returnValue(of(SUCCESS_MESSAGE));
       // set an original message
       alertService.success({ phrase: A_MESSAGE });
@@ -249,7 +249,7 @@ describe('AlertService', () => {
       alertService.success({ phrase: SUCCESS_MESSAGE });
     });
 
-    it('should be a hot alert successs observable with replacements params', done => {
+    it('should be a hot alert success observable with replacements params', done => {
       rpxTranslationServiceSpy.getTranslationWithReplacements$.and.returnValue(of(SUCCESS_MESSAGE));
       // set an original message
       alertService.success({ phrase: WARNING_MESSAGE, replacements: { CASEID: '1234' } });

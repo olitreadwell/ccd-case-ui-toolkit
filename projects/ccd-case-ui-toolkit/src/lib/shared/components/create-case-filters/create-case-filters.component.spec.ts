@@ -373,7 +373,7 @@ describe('CreateCaseFiltersComponent', () => {
     expect(component.selectedCaseTypeEvents).toBe(SORTED_CASE_EVENTS);
   });
 
-  it('should return blank list of events when user doesnt have create access', () => {
+  it('should return blank list of events when user doesn\'t have create access', () => {
     sessionStorageService.getItem.and.returnValue(`{"id": 1, "forename": "Firstname", "surname": "Surname",
       "roles": ["role3"], "email": "test@mail.com","token": null}`);
     mockDefinitionsService.getJurisdictions.and.returnValue(of([JURISDICTION_1]));
