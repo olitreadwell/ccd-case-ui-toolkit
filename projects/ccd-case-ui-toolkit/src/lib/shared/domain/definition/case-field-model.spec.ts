@@ -14,7 +14,7 @@ describe('CaseField', () => {
     component = new CaseField();
   }));
 
-  it('should generate hierachical path for casefield hierarchies', () => {
+  it('should generate hierarchical path for casefield hierarchies', () => {
     const gparent: CaseField = new CaseField();
     gparent.id = 'grandparent';
     gparent.parent = null;
@@ -61,7 +61,7 @@ describe('CaseField', () => {
     expect(htmlId).toBe('joeyramone');
   });
 
-  it('should be able to retrieve right values from the accessors menthods when FieldType is DynamicLists', () => {
+  it('should be able to retrieve right values from the accessors methods when FieldType is DynamicLists', () => {
     const fieldType: FieldType = new FieldType();
     fieldType.type = 'DynamicList';
     component.field_type = fieldType;
@@ -71,7 +71,7 @@ describe('CaseField', () => {
     expect(component.value).toBe(null);
   });
 
-  it('should be able to retrieve right values from the accessors menthods when FieldType is MultiSelectList', () => {
+  it('should be able to retrieve right values from the accessors methods when FieldType is MultiSelectList', () => {
     const fieldType: FieldType = new FieldType();
     fieldType.type = 'DynamicMultiSelectList';
     component.field_type = fieldType;
@@ -81,7 +81,7 @@ describe('CaseField', () => {
     expect(component.value).toBe(null);
   });
 
-  it('should be able to retrieve right values from the accessors menthods when FieldType is Text', () => {
+  it('should be able to retrieve right values from the accessors methods when FieldType is Text', () => {
     const fieldType: FieldType = new FieldType();
     fieldType.type = 'Text';
     component.field_type = fieldType;

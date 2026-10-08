@@ -12,7 +12,7 @@ import { skip, Subscription } from 'rxjs';
   standalone: false
 })
 /**
- * Checks all labels and substitutes any placholders that reference other fields values.
+ * Checks all labels and substitutes any placeholders that reference other fields values.
  */
 export class LabelSubstitutorDirective implements OnInit, OnDestroy {
 
