@@ -131,7 +131,7 @@ export class WriteCaseFlagFieldComponent extends AbstractFieldWriteJourneyCompon
 
       if (this.route.snapshot.data.eventTrigger.case_fields) {
         // there is an edge case in the navigation when going back, sometimes the case_fileds will lose values in the values which causes the flow to break before CYA
-        // below funciton ensures all data is correctly set.
+        // below function ensures all data is correctly set.
         const flagData = this.validateCaseFields(this.route.snapshot.data.eventTrigger.case_fields);
         this.flagsData = (this.route.snapshot.data.eventTrigger.case_fields as CaseField[])
           .reduce((flags: FlagsWithFormGroupPath[], caseField: CaseField) => {
@@ -168,7 +168,7 @@ export class WriteCaseFlagFieldComponent extends AbstractFieldWriteJourneyCompon
     // CSFD-16.
     // Setup the page number to initially be the same value as
     // the start page number. Provided that some state exists within
-    // the page state service, use that instaead.
+    // the page state service, use that instead.
     //
     // If isDisplayContextParameterUpdate is true, then the starting page must be
     // the value of 4. Otherwise, it's 0. However, we're using an enum to simplify
@@ -339,7 +339,7 @@ export class WriteCaseFlagFieldComponent extends AbstractFieldWriteJourneyCompon
   }
 
   public previousPage(): void {
-    // if we are navigating away from the page, we should set the error messages to empty so the message dissapears
+    // if we are navigating away from the page, we should set the error messages to empty so the message disappears
     this.errorMessages = [];
     this.journeyPreviousPageNumber = this.fieldState;
     if (this.hasPrevious() && this.fieldState === CaseFlagFieldState.FLAG_COMMENTS && !this.flagType?.listOfValues) {

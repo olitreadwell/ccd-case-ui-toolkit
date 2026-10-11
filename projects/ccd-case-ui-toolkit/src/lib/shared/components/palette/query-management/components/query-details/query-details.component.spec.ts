@@ -257,13 +257,13 @@ describe('QueryDetailsComponent', () => {
   });
 
   describe('isInternalUser', () => {
-    it('should return true if the user doesnt have pui-case-manager', () => {
+    it('should return true if the user doesn\'t have pui-case-manager', () => {
       mockSessionStorageService.getItem.and.returnValue(JSON.stringify(USER));
       fixture.detectChanges();
       expect(component.isInternalUser()).toBeTruthy();
     });
 
-    it('should return true if the user doesnt have pui-case-manager', () => {
+    it('should return true if the user doesn\'t have pui-case-manager', () => {
       USER.roles.push(PUI_CASE_MANAGER);
       mockSessionStorageService.getItem.and.returnValue(JSON.stringify(USER));
       fixture.detectChanges();
@@ -271,7 +271,7 @@ describe('QueryDetailsComponent', () => {
       USER.roles.pop();
     });
 
-    it('should return true if the user doesnt have pui-case-manager', () => {
+    it('should return true if the user doesn\'t have pui-case-manager', () => {
       USER.roles.push('Civil-Judge');
       mockSessionStorageService.getItem.and.returnValue(JSON.stringify(USER));
       fixture.detectChanges();
