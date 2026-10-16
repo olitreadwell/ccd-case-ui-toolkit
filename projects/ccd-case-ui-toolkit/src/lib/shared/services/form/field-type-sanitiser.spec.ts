@@ -281,7 +281,7 @@ describe('FieldTypeSanitiser', () => {
       expect(updatedField.field_type.complex_fields).not.toContain(jasmine.objectContaining({ id: 'externalMessageWhoToSendTo' }));
     });
 
-    it('should not ammend list items if display_context is HIDDEN', () => {
+    it('should not amend list items if display_context is HIDDEN', () => {
       mockCaseFields[1].field_type.complex_fields[0].display_context = 'HIDDEN';
       const result = fieldTypeSanitiser.ensureDynamicMultiSelectListPopulated(mockCaseFields);
       console.log(JSON.stringify(result));

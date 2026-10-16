@@ -63,14 +63,14 @@ describe('ActivityService', () => {
     expect(activityService.isEnabled).toBeTruthy();
   });
 
-  it('should return not enabled when activity url is emty', () => {
+  it('should return not enabled when activity url is empty', () => {
     appConfig.getActivityUrl.and.returnValue('');
     activityService['userAuthorised'] = true;
 
     expect(activityService.isEnabled).toBeFalsy();
   });
 
-  it('should return enabled when activity url is not emty', () => {
+  it('should return enabled when activity url is not empty', () => {
     appConfig.getActivityUrl.and.returnValue('www');
     activityService['userAuthorised'] = true;
 

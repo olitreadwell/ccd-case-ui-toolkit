@@ -448,7 +448,7 @@ describe('DatetimePickerComponent', () => {
     confirm.dispatchEvent(new MouseEvent('click'));
     fixture.detectChanges();
 
-    // check that the the amount of seconds has been changed (avoids intermittent test failure issue)
+    // check that the amount of seconds has been changed (avoids intermittent test failure issue)
     expect(fixture.nativeElement.querySelector('input').value).not.toBe(initialValue);
 
     flush();
