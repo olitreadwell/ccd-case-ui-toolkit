@@ -2,6 +2,7 @@
   class="tabs-panel"
   [id]="id"
   role="tabpanel"
+  [attr.aria-labelledby]="getTabId(id)"
   [ngClass]="{
           'js-hidden': !selected
         }"
