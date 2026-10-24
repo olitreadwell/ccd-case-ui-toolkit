@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MockRpxTranslatePipe } from '../../../../test/mock-rpx-translate.pipe';
 import { NoTasksAvailableComponent } from './no-tasks-available.component';
 
-describe('NoTasksAvalaibleComponent', () => {
+describe('NoTasksAvailableComponent', () => {
   let component: NoTasksAvailableComponent;
   let fixture: ComponentFixture<NoTasksAvailableComponent>;
   const mockRoute: any = {
