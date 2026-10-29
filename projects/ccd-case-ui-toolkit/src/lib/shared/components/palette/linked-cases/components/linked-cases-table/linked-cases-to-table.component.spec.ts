@@ -203,7 +203,7 @@ describe('LinkCasesToTableComponent', () => {
 
   /* Disabling this test for now to do the time constraint */
   /* Will be re-visited later */
-  xit('should find atleast one casename missing a tag in the table', () => {
+  xit('should find at least one casename missing a tag in the table', () => {
     let caseNameMissingEle = 0;
     component.ngOnInit();
     fixture.detectChanges();

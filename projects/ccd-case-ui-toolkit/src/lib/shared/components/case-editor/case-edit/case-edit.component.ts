@@ -462,7 +462,7 @@ export class CaseEditComponent implements OnInit, OnDestroy {
       // CaseField itself (the sub-fields do not contain any values, so these need to be obtained from the
       // parent)
       // Update rawFormValueData for this field
-      // creating form group and adding control into it in case caseField is of complext type and and part of formGroup
+      // creating form group and adding control into it in case caseField is of complex type and part of formGroup
       const form: FormGroup = new FormGroup({});
       if (formGroup.controls[key].value) {
         Object.keys(formGroup.controls[key].value).forEach((item) => {
