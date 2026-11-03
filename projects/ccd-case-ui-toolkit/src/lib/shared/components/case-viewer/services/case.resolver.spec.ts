@@ -329,7 +329,7 @@ describe('CaseResolver', () => {
 
     });
 
-    it('should avoid making sevice call and return cached case view when cached view exists', () => {
+    it('should avoid making service call and return cached case view when cached view exists', () => {
       CASE.case_id = '42';
       caseNotifier.cachedCaseView = CASE;
       caseResolver
@@ -445,7 +445,7 @@ describe('CaseResolver', () => {
       expect(caseNotifier.cachedCaseView).toEqual(DRAFT);
     });
 
-    it('should avoid making sevice call and return cached case view when cached view exists', () => {
+    it('should avoid making service call and return cached case view when cached view exists', () => {
       DRAFT.case_id = 'DRAFT42';
       caseNotifier.cachedCaseView = DRAFT;
       caseResolver
@@ -457,7 +457,7 @@ describe('CaseResolver', () => {
       expect(caseNotifier.cachedCaseView).toBe(DRAFT);
     });
 
-    it('should make sevice call when cached case view is not exists', () => {
+    it('should make service call when cached case view is not exists', () => {
       DRAFT.case_id = 'DRAFT42';
       caseResolver
         .resolve(route)

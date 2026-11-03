@@ -4,8 +4,8 @@ import {
   SimpleChanges, ViewChild
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MatLegacyDialog as MatDialog, MatLegacyDialogConfig as MatDialogConfig } from '@angular/material/legacy-dialog';
-import { MatLegacyTabGroup as MatTabGroup } from '@angular/material/legacy-tabs';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatTabGroup } from '@angular/material/tabs';
 import { ActivatedRoute, NavigationEnd, Params, Router } from '@angular/router';
 import { plainToClass } from 'class-transformer';
 import { RpxTranslatePipe } from 'rpx-xui-translation';
@@ -374,7 +374,7 @@ export class CaseFullAccessViewComponent implements OnInit, OnDestroy, OnChanges
         }
       }
     }
-    // once the page has beeen stabilised, ensure the selected tab is scrolled into view
+    // once the page has been stabilised, ensure the selected tab is scrolled into view
     this.zone.onStable.pipe(take(1)).subscribe(() => {
       const header: any = (this.tabGroup as any)._tabHeader;
       if (this.selectedTabIndex < 5){

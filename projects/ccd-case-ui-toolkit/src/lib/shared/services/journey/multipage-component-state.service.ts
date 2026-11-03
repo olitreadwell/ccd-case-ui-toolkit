@@ -7,7 +7,7 @@ import { Journey, JourneyInstigator } from '../../domain';
 export class MultipageComponentStateService {
   //is journey at start will help keep track of the progress through the journey.
   private isJourneyAtStart: boolean = false;
-  //journey collection references an upto date list of all the journey components currently rendered!!!!
+  //journey collection references an up to date list of all the journey components currently rendered!!!!
   private journeyCollection: Journey[] = new Array<Journey>();
   //the instigator references the case-edit-page component that will invoke the next and previous methods
   private instigator: JourneyInstigator | null = null;

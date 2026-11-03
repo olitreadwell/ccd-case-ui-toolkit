@@ -79,7 +79,7 @@ export class UnLinkCasesComponent extends AbstractFieldWriteJourneyComponent imp
   }
 
   public getLinkedCaseId(linkedCase): string {
-    // challenged access doesnt return props in the same format, account for this
+    // challenged access doesn't return props in the same format, account for this
     return linkedCase.caseReference ? linkedCase.caseReference : linkedCase['id'];
   }
 
