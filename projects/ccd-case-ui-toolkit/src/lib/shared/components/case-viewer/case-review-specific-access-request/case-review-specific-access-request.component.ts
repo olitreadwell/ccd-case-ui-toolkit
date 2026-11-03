@@ -45,7 +45,7 @@ export class CaseReviewSpecificAccessRequestComponent
   }
 
   public ngOnInit(): void {
-    // TODO: this ticket is blocked so mocked with those data to go through, they will be removed and implimented with actual data
+    // TODO: this ticket is blocked so mocked with those data to go through, they will be removed and implemented with actual data
     // when dependency resolved
     this.setMockData();
     this.title = ReviewSpecificAccessRequestPageText.TITLE;

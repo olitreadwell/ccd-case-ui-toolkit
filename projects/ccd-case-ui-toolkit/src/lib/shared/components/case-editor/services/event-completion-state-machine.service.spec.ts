@@ -273,7 +273,7 @@ describe('EventCompletionStateMachineService', () => {
     expect(context.component.setTaskState).toHaveBeenCalledWith(EventCompletionTaskStates.TaskCancelled);
   });
 
-  it('should add transition for state check taks can be completed', () => {
+  it('should add transition for state check tasks can be completed', () => {
     stateMachine = service.initialiseStateMachine(context);
     service.createStates(stateMachine);
     service.addTransitionsForStateCheckTasksCanBeCompleted();

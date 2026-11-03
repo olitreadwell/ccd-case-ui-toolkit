@@ -144,7 +144,7 @@ export class AlertService {
     if (!urlInfo) {
       this.preserveAlerts = preserve;
     } else {
-      // check if the url includes the sting given
+      // check if the url includes the string given
       this.preserveAlerts = this.currentUrlIncludesInfo(preserve, urlInfo);
     }
   }

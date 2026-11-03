@@ -41,7 +41,7 @@ describe('ValidPageListCaseFieldsService', () => {
     validPageListCaseFieldsService = new ValidPageListCaseFieldsService(fieldsUtils);
   });
 
-  it('should return valid data from case submition after deleting non-valid fields', () => {
+  it('should return valid data from case submission after deleting non-valid fields', () => {
     validPageListCaseFieldsService.deleteNonValidatedFields(validPageList, caseEventData, eventTriggerFields, false, formFields);
     expect(Object.keys(caseEventData).length).toBe(3);
   });

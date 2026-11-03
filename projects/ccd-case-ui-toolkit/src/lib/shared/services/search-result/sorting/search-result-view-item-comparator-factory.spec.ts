@@ -329,7 +329,7 @@ describe('SearchResultViewItemComparatorFactory', () => {
 
     });
 
-    it('Should return a comparator which co-erces non-existant field to an empty string', () => {
+    it('Should return a comparator which co-erces non-existent field to an empty string', () => {
 
       const comparator
         = new SearchResultViewItemComparatorFactory().createSearchResultViewItemComparator(column('Email'));

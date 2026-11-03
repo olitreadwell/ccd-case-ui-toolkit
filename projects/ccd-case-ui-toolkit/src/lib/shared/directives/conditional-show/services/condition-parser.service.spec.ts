@@ -439,7 +439,7 @@ describe('ConditionParser', () => {
       ];
 
       testCases.forEach(test => {
-        it(`should evaluate evaluate complex type field conditions correctly`, () => {
+        it(`should evaluate complex type field conditions correctly`, () => {
           const result = ConditionParser.evaluate(test.input, conditions);
           expect(result).toEqual(test.expected);
         });
