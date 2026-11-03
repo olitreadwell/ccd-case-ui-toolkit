@@ -149,9 +149,9 @@ export class ReadCaseFlagFieldComponent extends AbstractFieldReadComponent imple
       const control = this.formGroup.get(controlName);
       if ((controlName !== path)) {
         if (control['caseField'].formatted_value?.details) {
-          // we want to loop through the current flag details to ensure that there are no additional data from the usre restarting the flow that have been added.
+          // we want to loop through the current flag details to ensure that there are no additional data from the user restarting the flow that have been added.
           for (const value in control['caseField'].formatted_value?.details) {
-            // if the id is undefined then the user has added this as part of their current flow and we should remove it so it doesnt get added to the case
+            // if the id is undefined then the user has added this as part of their current flow and we should remove it so it doesn't get added to the case
             if (!control['caseField'].formatted_value?.details[value].id) {
               control['caseField'].value.details.pop();
               control['caseField'].formatted_value.details.pop();

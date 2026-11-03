@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, Component, ElementRef, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
-import { MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { plainToClassFromExist } from 'class-transformer';
 import { Subscription } from 'rxjs';
 import { FieldType } from '../../../domain/definition/field-type.model';
@@ -336,7 +335,7 @@ export class WriteCollectionFieldComponent extends AbstractFieldWriteComponent i
     if (this.isExpanded) {
       return false;
     }
-    // Was reassesed as part of EUI-3505. There is still a caveat around CRD, but that was deemed an unlikely scenario
+    // Was reassessed as part of EUI-3505. There is still a caveat around CRD, but that was deemed an unlikely scenario
     const id = this.getControlIdAt(index);
     if (id) {
       if (!!this.profile.user && !!this.profile.user.idam) {

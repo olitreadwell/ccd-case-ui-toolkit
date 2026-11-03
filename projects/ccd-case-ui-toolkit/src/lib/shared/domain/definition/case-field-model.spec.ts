@@ -1,4 +1,5 @@
 import { waitForAsync } from '@angular/core/testing';
+import { plainToClassFromExist } from 'class-transformer';
 import { CaseField } from './case-field.model';
 import { FieldType } from './field-type.model';
 
@@ -13,7 +14,7 @@ describe('CaseField', () => {
     component = new CaseField();
   }));
 
-  it('should generate hierachical path for casefield hierarchies', () => {
+  it('should generate hierarchical path for casefield hierarchies', () => {
     const gparent: CaseField = new CaseField();
     gparent.id = 'grandparent';
     gparent.parent = null;
@@ -33,6 +34,16 @@ describe('CaseField', () => {
     expect(htmlId).toBe('joeyramone');
   });
 
+  it('should retain the display context parameter from a CCD definition', () => {
+    const caseField = plainToClassFromExist(new CaseField(), {
+      id: 'staffUser',
+      field_type: { id: 'Text', type: 'Text' },
+      display_context_parameter: '#ARGUMENT(CATEGORY-ADMIN,CATEGORY-CTSC)'
+    });
+
+    expect(caseField.display_context_parameter).toBe('#ARGUMENT(CATEGORY-ADMIN,CATEGORY-CTSC)');
+  });
+
   it('should return simple id for top level field', () => {
     component.parent = null;
     component.id = 'joeyramone';
@@ -50,7 +61,7 @@ describe('CaseField', () => {
     expect(htmlId).toBe('joeyramone');
   });
 
-  it('should be able to retrieve right values from the accessors menthods when FieldType is DynamicLists', () => {
+  it('should be able to retrieve right values from the accessors methods when FieldType is DynamicLists', () => {
     const fieldType: FieldType = new FieldType();
     fieldType.type = 'DynamicList';
     component.field_type = fieldType;
@@ -60,7 +71,7 @@ describe('CaseField', () => {
     expect(component.value).toBe(null);
   });
 
-  it('should be able to retrieve right values from the accessors menthods when FieldType is MultiSelectList', () => {
+  it('should be able to retrieve right values from the accessors methods when FieldType is MultiSelectList', () => {
     const fieldType: FieldType = new FieldType();
     fieldType.type = 'DynamicMultiSelectList';
     component.field_type = fieldType;
@@ -70,7 +81,7 @@ describe('CaseField', () => {
     expect(component.value).toBe(null);
   });
 
-  it('should be able to retrieve right values from the accessors menthods when FieldType is Text', () => {
+  it('should be able to retrieve right values from the accessors methods when FieldType is Text', () => {
     const fieldType: FieldType = new FieldType();
     fieldType.type = 'Text';
     component.field_type = fieldType;
