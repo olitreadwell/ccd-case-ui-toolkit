@@ -39,4 +39,42 @@ export class TabsComponent implements AfterContentInit {
 
     panels.forEach((panel) => panel.selected = id === panel.id);
   }
+
+  public getTabId(id: string): string {
+    return 'tab-' + id;
+  }
+
+  public onKeyDown(event: KeyboardEvent, panel: TabComponent): void {
+    const panels: TabComponent[] = this.panels.toArray();
+    const currentIndex: number = panels.indexOf(panel);
+    const nextIndex: number | null = this.getNextIndex(event.key, currentIndex, panels.length);
+
+    if (nextIndex === null) {
+      return;
+    }
+
+    event.preventDefault();
+    this.show(panels[nextIndex].id);
+    setTimeout(() => {
+      const tab: ElementRef | undefined = this.tabs.toArray()[nextIndex];
+      if (tab) {
+        tab.nativeElement.focus();
+      }
+    }, 0);
+  }
+
+  public getNextIndex(key: string, currentIndex: number, count: number): number | null {
+    switch (key) {
+      case 'ArrowRight':
+        return (currentIndex + 1) % count;
+      case 'ArrowLeft':
+        return (currentIndex - 1 + count) % count;
+      case 'Home':
+        return 0;
+      case 'End':
+        return count - 1;
+      default:
+        return null;
+    }
+  }
 }
